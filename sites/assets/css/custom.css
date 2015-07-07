@@ -1,0 +1,370 @@
+/* Global Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  color: #444;
+  overflow:hidden;
+}
+
+body {
+  background-color: white;
+  font: 16px helvetica, arial, sans-serif;
+  /*font-size: small;
+  text-align: center;*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: bold;
+  color: black;
+}
+
+h1 {
+  margin-bottom: 1em;
+}
+
+p {
+  margin: 1em 0;
+}
+
+ a {
+  color: #444;
+  text-decoration: none;
+}
+
+ a:hover {
+  color:  black;
+  text-decoration: none;
+}
+
+
+/*清除浮动*/
+.cf{zoom:1}
+.cf:after{content:'';display:block;clear:both;height:0;overflow:hidden;visibility:hidden}
+
+
+ #post ul{
+  list-style-type: none;
+  margin-bottom: 2em;
+  padding-left: 5px;
+}
+
+ #post li {
+    line-height: 1.75em;
+  }
+
+#post span {
+    color: #aaa;
+    font-family: Monaco, "Courier New", monospace;
+    font-size: 80%;
+  }
+  #post  p{
+    padding-left: 5px;
+  }
+/*
+* 全局样式
+* 配色方案：rgb(113,175,164);rgb(170,138,87);rgb(255,255,255);
+* (棕，青，白)所占比重依次降低
+* link-color:#337ab7，偏蓝；
+*
+*/
+body{
+	background-color: rgb(255,255,255);
+	height: 100%;
+}
+
+img{
+  width: 100%;
+}
+
+/*
+* black layer
+*/
+ #gray_back{
+            display: none;
+            background-color: #000000;
+            opacity: 0.7;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 99;
+            overflow:scroll;
+        }
+
+/*
+* 自定义头部导航的布局
+*/
+#header{
+	border-width: 0;
+       border-style: solid;
+       border-top: 1px solid transparent;
+       border-bottom: 1px solid #ddd;
+       background-color: white;
+	height: 50px;
+       font-weight: bold;
+}
+.navbar{
+	border-radius: 0px;
+       margin-left: -50px;
+       margin-right: -50px;
+}
+@media (max-width: 1000px){
+  .navbar{
+      margin: 0px;
+      margin-left: -15px;
+  }
+}
+
+
+/*#header a {
+    color: white;
+    text-decoration: none;
+}*/
+#header a:hover {
+    color: #444;
+    font-size: 16px;
+    background-color: #ddd;
+    text-decoration: none;
+}
+/*
+* custom the content style
+*/
+#content{
+	position: relative;
+	min-height: 90%;
+}
+
+#footer{
+	color: white;
+	height: 100px;
+	padding-top: 20px;
+	background-color: gray;
+}
+
+/*
+* custom the post style
+*/
+
+#post{
+	margin: 20px auto;
+}
+
+/*
+* content style setting
+*/
+#content .page_lists{
+  margin-left: -15px;
+  margin-right: -15px;
+}
+#content .page_lists a{
+  padding: 5px; 
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#content .page_lists .post-tags{
+  position: absolute;
+  bottom:16px;
+  right: 15px;
+  font-size: 8px;
+}
+
+/*
+* post sidebar
+*
+#post-content{
+      margin-right: 150px;
+}
+#post-sidebar{
+  position: absolute;
+  right: 0px;
+  width: 150px;
+}*/
+
+
+.page_lists{
+	margin-top: 20px;
+}
+
+.page_lists li{
+	list-style: none;
+       padding-left: 5px;
+}
+
+.post-title{
+  font-weight: normal;
+}
+.post-date{
+  margin-top: 5px;
+  color: gray;
+  font-size: 80%;
+}
+
+.post-header h1{
+  font-size: 120%;
+}
+
+/*
+* 重载bootstrap css style
+*/
+.list-group a {
+  color: #555;
+  text-decoration: none;
+}
+
+.list-group a:hover {
+  color:  black;
+  text-decoration: none;
+}
+
+
+.badge{
+   margin-top: 20px;
+   background-color: #444;
+   opacity:0.5;
+}
+
+/*
+* category page
+*/
+.category a{
+  padding: 5px;
+  display: block;
+}
+
+/*
+* books page style
+*/
+.book-content{
+  padding: 5px;
+  margin-bottom:  -1px;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+}
+
+.book-img {
+  width: 100px;
+  height:  130px;
+  float: right;
+}
+.book-img img{
+  width: 100px;
+  height:  130px;
+}
+
+.book-content .book-message{
+  width: 500px;
+  height:  130px;
+  float: left;
+}
+.book-content .book-message p{
+      margin: 5px;
+      font-size:  80%;
+}
+
+
+@media (max-width: 768px){
+  /*导航栏隐藏*/
+  #header{
+       position: fixed;
+       top:-42px;
+       left: -200px;
+        width: 200px;
+        height: 100%;
+        z-index: 999;
+        color: black;
+        background-color: #fff;
+        border:1px #ddd solid;
+  }
+  #header .navbar ul{
+    margin: 0px;
+    padding:0px;
+  }
+  #header .navbar li{
+      width: 198px;
+      height: 40px;
+      text-align: left;
+      border-bottom:1px #ddd solid;
+  }
+  #header .navbar-brand{
+    display: none;
+  }
+  #header li a:hover {
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+}
+#sidebar{
+  position: fixed;
+  top:15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+  background: url(../images/menu.png) no-repeat 50% 50%;
+  background-size: 140%;
+}
+
+
+/*
+* content style setting
+*/
+#content .page_lists{
+  margin-left: -15px;
+  margin-right: -15px;
+}
+#content .page_lists a{
+  padding: 5px; 
+}
+#content .page_lists .post-tags{
+  position: absolute;
+  bottom:16px;
+  right: 0;
+  font-size: 8px;
+}
+
+
+/*
+* category style
+*/
+.category a{
+  border-top:1px #ddd solid;
+  border-bottom:1px #ddd solid;
+  margin-bottom: -1px;
+}
+
+#footer{
+  
+}
+
+/*
+* book page style
+*/
+.book-content{
+  width: 100%;
+  padding: 5px;
+}
+.book-img{
+  width: 30%;
+  margin-right: 5px;
+}
+.book-img img{
+  background-size: 100%;
+}
+.book-content .book-message{
+  width: 68%;
+}
+.book-content .book-message p{
+  height: 13%;
+  margin:0;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+}
